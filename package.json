@@ -1,0 +1,30 @@
+{
+	"name": "lottery",
+	"version": "1.0.0",
+	"description": "",
+	"keywords": [],
+	"author": "",
+	"license": "MIT",
+	"main": "main.js",
+	"scripts": {
+		"build": "cross-env NODE_ENV=prod electron-packager . Mdpretty --all --overwrite --out ./dist/app --electron-version 10.0.0 --icon ./favicon.ico",
+		"dev": "cross-env NODE_ENV=dev electron ."
+	},
+	"dependencies": {
+		"@hot-loader/react-dom": "16.13.0",
+		"electron": "10.0.0",
+		"prop-types": "15.7.2",
+		"react": "16.13.1",
+		"react-dom": "16.13.1",
+		"react-hot-loader": "4.12.21",
+		"react-router-dom": "5.2.0"
+	},
+	"devDependencies": {
+		"cross-env": "7.0.2",
+		"electron-packager": "15.1.0"
+	},
+	"engines": {
+		"node": ">= 12.0.0",
+		"npm": ">= 6.9.0"
+	}
+}
