@@ -2,18 +2,18 @@ const Path = require("path");
 const { app, BrowserWindow } = require("electron");
 
 function CreateWindow() {
-	const mainWindow = new BrowserWindow({
+	const browserWindow = new BrowserWindow({
 		height: 1200,
 		minHeight: 1200,
 		minWidth: 1600,
 		width: 1600
 	});
 	if (process.env.NODE_ENV === "dev") {
-		mainWindow.loadURL("http://127.0.0.1:9999");
-		mainWindow.webContents.openDevTools();
+		browserWindow.loadURL("http://127.0.0.1:9999");
+		browserWindow.webContents.openDevTools();
 	} else {
 		const entry = Path.join(__dirname, `./dist/${process.env.NODE_ENV}/index.html`);
-		mainWindow.loadFile(entry);
+		browserWindow.loadFile(entry);
 	}
 }
 
