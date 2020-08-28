@@ -7,7 +7,8 @@
 	"license": "MIT",
 	"main": "main.js",
 	"scripts": {
-		"build": "cross-env NODE_ENV=prod electron-packager . Mdpretty --all --overwrite --out ./dist/app --electron-version 10.0.0 --icon ./favicon.ico",
+		"build:prod": "cross-env NODE_ENV=prod electron-packager . Lottery --all --overwrite --out ./dist/app/prod --electron-version 10.0.0 --icon ./favicon.ico",
+		"build:test": "cross-env NODE_ENV=test electron-packager . Lottery --all --overwrite --out ./dist/app/test --electron-version 10.0.0 --icon ./favicon.ico",
 		"dev": "cross-env NODE_ENV=dev electron ."
 	},
 	"dependencies": {

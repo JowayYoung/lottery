@@ -12,7 +12,7 @@ function CreateWindow() {
 		mainWindow.loadURL("http://127.0.0.1:9999");
 		mainWindow.webContents.openDevTools();
 	} else {
-		const entry = Path.join(__dirname, "./dist/test/index.html");
+		const entry = Path.join(__dirname, `./dist/${process.env.NODE_ENV}/index.html`);
 		mainWindow.loadFile(entry);
 	}
 }
